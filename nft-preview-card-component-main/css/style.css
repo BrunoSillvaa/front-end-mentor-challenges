@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background-color: hsl(217deg, 54%, 11%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  background-color: hsl(216deg, 50%, 16%);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 12px;
+  font-family: "Outfit", sans-serif;
+  width: 300px;
+}
+.card > img {
+  width: 100%;
+  border-radius: 6px;
+}
+.card .tittle {
+  font-size: 24px;
+  font-weight: 600;
+}
+.card .desc {
+  color: hsl(215deg, 51%, 70%);
+  font-size: 16px;
+  font-weight: 300;
+}
+.card .infos {
+  color: hsl(178deg, 100%, 50%);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+}
+.card .infos .eth {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.card .infos .days {
+  color: hsl(215deg, 51%, 70%);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: 300;
+}
+.card .user {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 15px;
+  border-top: 1px solid hsl(215deg, 51%, 70%);
+  padding-top: 20px;
+}
+.card .user img {
+  width: 25px;
+  border: 1px solid white;
+  border-radius: 50%;
+}
+.card .user .user-name {
+  font-size: 14px;
+  color: hsl(215deg, 51%, 70%);
+}
+.card .user .user-name span {
+  color: white;
+}/*# sourceMappingURL=style.css.map */
