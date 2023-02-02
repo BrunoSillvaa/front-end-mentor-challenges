@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: hsl(216deg, 12%, 8%);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background: hsl(214deg, 19%, 15%);
+  height: 300px;
+  width: 300px;
+  border-radius: 20px;
+  padding: 20px;
+  font-family: "Overpass", sans-serif;
+  box-shadow: 30px 30px 50px -35px rgba(0, 0, 0, 0.192);
+}
+.card.rating {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.card.rating.close {
+  display: none;
+}
+.card.rating img {
+  background: hsl(212deg, 12%, 21%);
+  padding: 7px;
+  border-radius: 50%;
+}
+.card.rating .title {
+  color: hsl(0deg, 0%, 100%);
+  font-size: 24px;
+  font-weight: 700;
+}
+.card.rating .desc {
+  color: hsl(217deg, 12%, 63%);
+  font-size: 15px;
+  font-weight: 400;
+}
+.card.rating .inputs {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.card.rating .inputs input {
+  display: none;
+}
+.card.rating .inputs input#one[checked=true] ~ label[for=one], .card.rating .inputs input#two[checked=true] ~ label[for=two], .card.rating .inputs input#three[checked=true] ~ label[for=three], .card.rating .inputs input#four[checked=true] ~ label[for=four], .card.rating .inputs input#five[checked=true] ~ label[for=five] {
+  color: hsl(0deg, 0%, 100%);
+  background: hsl(25deg, 97%, 53%);
+}
+.card.rating .inputs label {
+  color: hsl(217deg, 12%, 63%);
+  background: hsl(212deg, 12%, 21%);
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  border-radius: 20px;
+  font-size: 15px;
+  line-height: 40px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.card.rating .inputs label:hover {
+  color: hsl(0deg, 0%, 100%);
+  background: hsl(217deg, 12%, 63%);
+}
+.card.rating .submit-button {
+  color: hsl(0deg, 0%, 100%);
+  background: hsl(25deg, 97%, 53%);
+  border: none;
+  width: 100%;
+  padding: 10px;
+  border-radius: 25px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.card.rating .submit-button:hover {
+  background: hsl(0deg, 0%, 100%);
+  color: hsl(25deg, 97%, 53%);
+}
+.card.thanks {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.card.thanks.open {
+  display: flex;
+  animation: openModal 0.2s ease-in-out;
+}
+@keyframes openModal {
+  from {
+    opacity: 0;
+    transform: translate3d(-30px, 0, 0px);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+.card.thanks img {
+  width: 125px;
+}
+.card.thanks .result {
+  color: hsl(25deg, 97%, 53%);
+  background: hsl(212deg, 12%, 21%);
+  font-size: 15px;
+  font-weight: 400;
+  padding: 5px 15px;
+  border-radius: 20px;
+}
+.card.thanks .title {
+  color: hsl(0deg, 0%, 100%);
+  font-size: 20px;
+}
+.card.thanks .desc {
+  color: hsl(217deg, 12%, 63%);
+  font-size: 12px;
+  text-align: center;
+}/*# sourceMappingURL=style.css.map */

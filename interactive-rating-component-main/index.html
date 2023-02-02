@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <link rel="stylesheet" href="./css/style.css">
+
+  <title>Frontend Mentor | Interactive rating component</title>
+
+</head>
+<body>
+
+  <div class="card rating">
+    <img src="images/icon-star.svg" alt="Start Icon">
+    <h1 class="title">How did we do?</h1>
+    <p class="desc">Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!</p>
+    <div class="inputs">
+      <input type="checkbox" name="1" id="one">
+      <input type="checkbox" name="2" id="two">
+      <input type="checkbox" name="3" id="three">
+      <input type="checkbox" name="4" id="four">
+      <input type="checkbox" name="5" id="five">
+
+      <label for="one">1</label>
+      <label for="two">2</label>
+      <label for="three">3</label>
+      <label for="four">4</label>
+      <label for="five">5</label>
+    </div>
+    <button class="submit-button" type="submit">Submit</button>
+  </div>
+
+  <div class="card thanks">
+    <img src="images/illustration-thank-you.svg" alt="Thank You Thank You">
+    <h2 class="result">You selected <span class="ratingNumber"></span> of 5</h2>
+    <h1 class="title">Thank you!</h1>
+    <p class="desc">
+      We appreciate you taking the time to give a rating.If you ever need more support,
+      don't hesitate to get in touch!
+    </p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

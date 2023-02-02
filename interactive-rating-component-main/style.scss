@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+$White: hsl(0, 0%, 100%);
+$LightGrey: hsl(217, 12%, 63%);
+$MediumGrey: hsl(212, 12%, 21%);
+$DarkBlue: hsl(214, 19%, 15%);
+$VeryDarkBlue: hsl(216, 12%, 8%);
+$Orange: hsl(25, 97%, 53%);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: $VeryDarkBlue;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background: $DarkBlue;
+    height: 300px;
+    width: 300px;
+    border-radius: 20px;
+    padding: 20px;
+    font-family: 'Overpass', sans-serif;
+    box-shadow:  30px 30px 50px -35px rgba(0, 0, 0, 0.192);
+
+    &.rating {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        
+        &.close {
+            display: none;
+        }
+
+        img {
+            background: $MediumGrey;
+            padding: 7px;
+            border-radius: 50%;
+        }
+        
+        .title {
+            color: $White;
+            font-size: 24px;
+            font-weight: 700;
+        }
+        
+        .desc {
+            color: $LightGrey;
+            font-size: 15px;
+            font-weight: 400;
+        }
+        
+        .inputs {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            
+            input {
+                display: none;
+                &#one[checked="true"] ~ label[for="one"],
+                &#two[checked="true"] ~ label[for="two"],
+                &#three[checked="true"] ~ label[for="three"],
+                &#four[checked="true"] ~ label[for="four"],
+                &#five[checked="true"] ~ label[for="five"] {
+                    color: $White;
+                    background: $Orange;
+                }
+            }
+            
+            
+            label {
+                color: $LightGrey;
+                background: $MediumGrey;
+                display: inline-block;
+                width: 35px;
+                height: 35px;
+                border-radius: 20px;
+                
+                font-size: 15px;
+                line-height: 40px;
+                text-align: center;
+                cursor: pointer;
+                transition: all .2s ease-in-out;
+                
+                &:hover {
+                    color: $White;
+                    background: $LightGrey;
+                }
+            }
+        }
+        
+        .submit-button {
+            color: $White;
+            background: $Orange;
+            border: none;
+            width: 100%;
+            padding: 10px;
+            border-radius: 25px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 12px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all .2s ease-in-out;
+            
+            &:hover {
+                background: $White;
+                color: $Orange;
+            }
+        }
+    }
+    
+    &.thanks {
+        display: none;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+        &.open {
+            display: flex;
+            animation: openModal .2s ease-in-out;
+
+            @keyframes openModal {
+                from {
+                    opacity: 0;
+                    transform: translate3d(-30px, 0, 0px);
+                } to {
+                    opacity: 1;
+                    transform: translate3d(0, 0, 0);
+                }
+            }
+        }
+
+        img {
+            width: 125px;
+        }
+
+        .result {
+            color: $Orange;
+            background: $MediumGrey;
+            font-size: 15px;
+            font-weight: 400;
+            padding: 5px 15px;
+            border-radius: 20px;
+        }
+
+        .title {
+            color: $White;
+            font-size: 20px;
+        }
+
+        .desc {
+            color: $LightGrey;
+            font-size: 12px;
+            text-align: center;
+        }
+    }
+}
