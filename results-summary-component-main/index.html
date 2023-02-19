@@ -16,7 +16,7 @@
   <section class="result">
     <h2>Your Result</h2>
     <div class="circle-result">
-      <span>76</span> of 100
+      <span class="result-num">0</span> of 100
     </div>
     <div class="text">
       <h1>Great</h1>
@@ -69,5 +69,21 @@
   </section>
 
 </div>
+
+  <script>
+    const resultNum = document.querySelector('.result-num')
+    const num = {start: 0, end: 76}
+    
+    const interval = setInterval(() => {
+      if (num.start == num.end) {
+        clearInterval(interval)
+      }
+      resultNum.textContent = num.start
+      num.start ++
+    }, 30)
+
+
+    console.log(num.end)
+  </script>
 </body>
 </html>
