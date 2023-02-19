@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+
+$White: #ffffff;
+$PaleBlue: #ebf1ff;
+$LightLavender: #c8c7ff;
+$DarkGrayBlue: #303b5a;
+$LightRoyalBlue: #2e2be9;
+$CobaltBlue: #1125d4;
+$LightSlateBlue: #7857ff;
+$GreenTeal: #00bd91;
+$OrangeyYellow: #ffb01f;
+$LightRed: #ff5757;
+
+@mixin responsive($device) {
+    @if $device == mobile {
+        @media only screen and (max-width: 500px) {
+            @content
+        }
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: 'Hanken Grotesk', sans-serif;
+}
+
+:root {
+    font-size: 62.5%;
+}
+
+body {
+    background: $PaleBlue;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background: White;
+    width: 70rem;
+    height: 50rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    overflow: hidden;
+    border-radius: 2.5rem;
+    box-shadow: 10px 10px 40px -10px rgba(17, 37, 212, 0.2);
+
+    @include responsive(mobile) {
+        height: 100vh;
+        width: 100vw;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: 1fr;
+        border-radius: 0;
+    }
+
+    .result {
+        background: $LightRoyalBlue;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: 2.5rem;
+        padding: 6rem 3rem;
+
+        @include responsive(mobile) {
+            border-top-right-radius: 0;
+            border-top-left-radius: 0;
+            padding: 3rem 2rem;
+        }
+
+        
+        h1 {
+            color: $White;
+            font-size: 3rem;
+            font-weight: 500;
+        }
+
+        h2 {
+            color: $LightLavender;
+            font-size: 2.5rem;
+            font-weight: 500;
+        }
+
+        p {
+            color: $LightLavender;
+            font-size: 1.5rem;
+            font-weight: 500;
+            text-align: center;
+            width: 75%;
+        }
+
+        .circle-result {
+            background: $CobaltBlue;
+            height: 17rem;
+            width: 17rem;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: $LightLavender;
+            box-shadow: inset 0px 10px 15px 0px rgba(0,0,0,0.2);
+
+            span {
+                color: $White;
+                font-size: 6rem;
+                font-weight: 800;
+            }
+        }
+
+        .text {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+        }
+    }
+
+    .summary {
+        padding: 6rem 3rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        @include responsive(mobile) {
+            padding: 3rem 3rem;
+        }
+
+        h2 {
+            color: $DarkGrayBlue;
+            font-size: 2.5rem;
+            font-weight: 800;
+        }
+
+        .summary-items {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 1rem;
+
+            .summary-item {
+                display: flex;
+                padding: 1.5rem 1rem;
+                gap: 1rem;
+                border-radius: 1rem;
+                cursor: pointer;
+
+                &:hover {
+                    transform: scale(103%);
+                }
+    
+                .summary-result {
+                    width: 100%;
+                    font-size: 1.5rem;
+                    font-weight: 700;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    .summary-num {
+                        color: hsl(224, 30%, 27%, 0.5);
+
+                        span {
+                            color: $DarkGrayBlue;
+                        }
+                    }
+                }
+    
+                &:nth-child(1) {
+                    color: $LightRed;
+                    background: hsl(0, 100%, 67%, 0.15);
+                }
+    
+                &:nth-child(2) {
+                    color: $OrangeyYellow;
+                    background: hsl(39, 100%, 56%, 0.15);
+                }
+    
+                &:nth-child(3) {
+                    color: $GreenTeal;
+                    background: hsl(166, 100%, 37%, 0.15);
+                }
+    
+                &:nth-child(4) {
+                    color: $LightSlateBlue;
+                    background: hsl(234, 85%, 45%, 0.15);
+                }
+            }
+        }
+
+        .continue-btn {
+            color: $White;
+            background: $DarkGrayBlue;
+            border: none;
+            padding: 1.5rem;
+            border-radius: 3rem;
+            font-size: 1.5rem;
+            font-weight: 500;
+            transition: .2s;
+            cursor: pointer;
+
+            &:hover {
+                background: $CobaltBlue;
+            }
+
+            &:active {
+                transform: scale(1.1);
+            }
+        }
+    }
+}

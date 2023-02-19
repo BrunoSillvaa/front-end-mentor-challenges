@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Hanken Grotesk", sans-serif;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  background: #ebf1ff;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background: White;
+  width: 70rem;
+  height: 50rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  overflow: hidden;
+  border-radius: 2.5rem;
+  box-shadow: 10px 10px 40px -10px rgba(17, 37, 212, 0.2);
+}
+@media only screen and (max-width: 500px) {
+  .card {
+    height: 100vh;
+    width: 100vw;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: 1fr;
+    border-radius: 0;
+  }
+}
+.card .result {
+  background: #2e2be9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 2.5rem;
+  padding: 6rem 3rem;
+}
+@media only screen and (max-width: 500px) {
+  .card .result {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    padding: 3rem 2rem;
+  }
+}
+.card .result h1 {
+  color: #ffffff;
+  font-size: 3rem;
+  font-weight: 500;
+}
+.card .result h2 {
+  color: #c8c7ff;
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+.card .result p {
+  color: #c8c7ff;
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-align: center;
+  width: 75%;
+}
+.card .result .circle-result {
+  background: #1125d4;
+  height: 17rem;
+  width: 17rem;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #c8c7ff;
+  box-shadow: inset 0px 10px 15px 0px rgba(0, 0, 0, 0.2);
+}
+.card .result .circle-result span {
+  color: #ffffff;
+  font-size: 6rem;
+  font-weight: 800;
+}
+.card .result .text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+.card .summary {
+  padding: 6rem 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media only screen and (max-width: 500px) {
+  .card .summary {
+    padding: 3rem 3rem;
+  }
+}
+.card .summary h2 {
+  color: #303b5a;
+  font-size: 2.5rem;
+  font-weight: 800;
+}
+.card .summary .summary-items {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+.card .summary .summary-items .summary-item {
+  display: flex;
+  padding: 1.5rem 1rem;
+  gap: 1rem;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+.card .summary .summary-items .summary-item:hover {
+  transform: scale(103%);
+}
+.card .summary .summary-items .summary-item .summary-result {
+  width: 100%;
+  font-size: 1.5rem;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card .summary .summary-items .summary-item .summary-result .summary-num {
+  color: hsla(224deg, 30%, 27%, 0.5);
+}
+.card .summary .summary-items .summary-item .summary-result .summary-num span {
+  color: #303b5a;
+}
+.card .summary .summary-items .summary-item:nth-child(1) {
+  color: #ff5757;
+  background: hsla(0deg, 100%, 67%, 0.15);
+}
+.card .summary .summary-items .summary-item:nth-child(2) {
+  color: #ffb01f;
+  background: hsla(39deg, 100%, 56%, 0.15);
+}
+.card .summary .summary-items .summary-item:nth-child(3) {
+  color: #00bd91;
+  background: hsla(166deg, 100%, 37%, 0.15);
+}
+.card .summary .summary-items .summary-item:nth-child(4) {
+  color: #7857ff;
+  background: hsla(234deg, 85%, 45%, 0.15);
+}
+.card .summary .continue-btn {
+  color: #ffffff;
+  background: #303b5a;
+  border: none;
+  padding: 1.5rem;
+  border-radius: 3rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  transition: 0.2s;
+  cursor: pointer;
+}
+.card .summary .continue-btn:hover {
+  background: #1125d4;
+}
+.card .summary .continue-btn:active {
+  transform: scale(1.1);
+}/*# sourceMappingURL=style.css.map */
