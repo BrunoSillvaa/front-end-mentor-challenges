@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Red Hat Display", sans-serif;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  height: 100vh;
+  background: hsl(225deg, 100%, 94%) url("../images/pattern-background-desktop.svg") no-repeat top center;
+  background-size: contain;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background: White;
+  width: 45rem;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  box-shadow: 0.6rem 0.6rem 3rem rgba(0, 0, 0, 0.2);
+}
+.card .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem;
+  gap: 2rem;
+}
+.card .content .title {
+  color: hsl(223deg, 47%, 23%);
+  font-size: 2rem;
+  font-weight: 900;
+}
+.card .content .desc {
+  color: hsl(224deg, 23%, 55%);
+  font-size: 1.6rem;
+  font-weight: 500;
+  text-align: center;
+  width: 80%;
+}
+.card .content .price {
+  background: hsl(225deg, 100%, 98%);
+  width: 100%;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, auto) 2fr auto;
+  align-items: center;
+  justify-items: center;
+  column-gap: 2rem;
+}
+.card .content .price .anual-plan h2 {
+  color: hsl(223deg, 47%, 23%);
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+.card .content .price .anual-plan p {
+  color: hsl(224deg, 23%, 55%);
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.card .content .price a {
+  color: hsl(245deg, 75%, 52%);
+  font-size: 1.3rem;
+  font-weight: 700;
+  grid-column: 4;
+}
+.card .content .price a:hover {
+  filter: brightness(110%);
+}
+.card .content .process-btn {
+  width: 100%;
+  color: hsl(225deg, 100%, 98%);
+  background: hsl(245deg, 75%, 52%);
+  padding: 1.3rem 0;
+  border: none;
+  border-radius: 1rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+.card .content .process-btn:hover {
+  filter: brightness(110%);
+}
+.card .content .process-btn:active {
+  transform: scale(101%);
+}
+.card .content .cancel-btn {
+  width: 100%;
+  color: hsl(224deg, 23%, 55%);
+  background: transparent;
+  padding: 1.3rem 0;
+  border: none;
+  border-radius: 1rem;
+  font-size: 1.3rem;
+  font-weight: 900;
+  cursor: pointer;
+}
+.card .content .cancel-btn:hover {
+  color: Black;
+}
+.card .content .cancel-btn:active {
+  transform: scale(101%);
+}/*# sourceMappingURL=style.css.map */

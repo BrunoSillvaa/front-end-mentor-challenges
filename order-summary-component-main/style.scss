@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+$PaleBlue: hsl(225, 100%, 94%);
+$VeryPaleBlue: hsl(225, 100%, 98%);
+$DesaturatedBlue: hsl(224, 23%, 55%);
+$BrightBlue: hsl(245, 75%, 52%);
+$DarkBlue: hsl(223, 47%, 23%);
+
+:root {
+    font-size: 62.5%;
+}
+
+body {
+    height: 100vh;
+    background: $PaleBlue url('../images/pattern-background-desktop.svg') no-repeat top center;
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background: White;
+    width: 45rem;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    box-shadow: .6rem .6rem 3rem rgba(0,0,0, 0.2);
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        padding: 4rem;
+        gap: 2rem;
+
+        .title {
+            color: $DarkBlue;
+            font-size: 2rem;
+            font-weight: 900;
+        }
+
+        .desc {
+            color: $DesaturatedBlue;
+            font-size: 1.6rem;
+            font-weight: 500;
+            text-align: center;
+            width: 80%;
+        }
+
+        .price {
+            background: $VeryPaleBlue;
+            width: 100%;
+            padding: 1.5rem;
+            border-radius: 1rem;
+            display: grid;
+            grid-template-columns: repeat(2, auto) 2fr auto;
+            align-items: center;
+            justify-items: center;
+            column-gap: 2rem;
+            
+            .anual-plan {
+
+                h2 {
+                    color: $DarkBlue;
+                    font-size: 1.5rem;
+                    font-weight: 900;
+                }
+
+                p {
+                    color: $DesaturatedBlue;
+                    font-size: 1.5rem;
+                    font-weight: 500;
+                }
+            }
+
+            a {
+                color: $BrightBlue;
+                font-size: 1.3rem;
+                font-weight: 700;
+                grid-column: 4;
+
+                &:hover {
+                    filter: brightness(110%);
+                }
+            }
+        }
+
+        .process-btn {
+            width: 100%;
+            color: $VeryPaleBlue;
+            background: $BrightBlue;
+            padding: 1.3rem 0;
+            border: none;
+            border-radius: 1rem;
+            font-size: 1.3rem;
+            font-weight: 700;
+            cursor: pointer;
+
+            &:hover {
+                filter: brightness(110%);
+            }
+
+            &:active {
+                transform: scale(101%);
+            }
+        }
+
+        .cancel-btn {
+            width: 100%;
+            color: $DesaturatedBlue;
+            background: transparent;
+            padding: 1.3rem 0;
+            border: none;
+            border-radius: 1rem;
+            font-size: 1.3rem;
+            font-weight: 900;
+            cursor: pointer;
+
+            &:hover {
+                color: Black;
+            }
+
+            &:active {
+                transform: scale(101%);
+            }
+        }
+    }
+}
